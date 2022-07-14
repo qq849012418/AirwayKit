@@ -9,6 +9,8 @@ namespace RRT
     public class RRT : MonoBehaviour
     {
         public GameObject targetModel;
+        public GameObject endPoint;
+        public GameObject player;
         public SplineComputer spcp;
         List<SplinePoint> sp_array;
         /// <summary>
@@ -270,6 +272,8 @@ namespace RRT
             }
             sp_array.Reverse();
             spcp.SetPoints(sp_array.ToArray());
+            player.GetComponent<SplineFollower>().follow = true;
+            //player.GetComponent<SplineProjector>().
             targetModel.GetComponent<MeshRenderer>().material.shader = Shader.Find("Happy/TwoSideShader");
         }
 
@@ -283,6 +287,9 @@ namespace RRT
                 Bounds bounds = GetBounds(targetModel);
                 minimum = bounds.min;
                 maximum = bounds.max;
+                if (endPoint.transform.position.x < 0)
+                    maximum.x /= 10;
+                else minimum.x /= 10;
             }
 
 
