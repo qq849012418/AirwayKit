@@ -52,7 +52,7 @@ namespace SplineMesh {
 
         private void Update() {
             //EditorUpdate();
-            if (Input.GetKey(KeyCode.Keypad1))
+            if (Input.GetKey(KeyCode.Q))
             {
                 rate += Time.deltaTime / DurationInSecond;
                 if (rate > 1)
@@ -61,7 +61,7 @@ namespace SplineMesh {
                 }
                 Contort();
             }
-            else if (Input.GetKey(KeyCode.Keypad2))
+            else if (Input.GetKey(KeyCode.E))
             {
                 rate -= Time.deltaTime / DurationInSecond;
                 if (rate < 0)
@@ -99,9 +99,10 @@ namespace SplineMesh {
                 meshBender.ComputeIfNeeded();
                 
                 tipObject.transform.forward = spline.GetSampleAtDistance(spline.Length * rate).tangent;
-                tipObject.transform.Rotate(90,0,0);
+                //tipObject.transform.Rotate(90,0,0);
                 tipObject.transform.position = transform.position + spline.GetSampleAtDistance(spline.Length * rate).location+new Vector3(1.1f,-0.2f,0);
                 //tipObject.transform.position = transform.position + spline.GetSampleAtDistance(spline.Length * rate).location;
+                //tipObject.transform.localPosition = transform.localPosition  + spline.GetSampleAtDistance(spline.Length * rate-1f).location + new Vector3(1f, -0.2f, 0);
 
             }
         }
