@@ -1,7 +1,7 @@
 
-<div style=”align: center”>
+<div align=center>
 
-<img src=”https://keenster-1300019754.cos.ap-shanghai-fsi.myqcloud.com/logo_final.png″/>
+<img src="https://keenster-1300019754.cos.ap-shanghai-fsi.myqcloud.com/logo_final.png"/>
 
 </div>
 
