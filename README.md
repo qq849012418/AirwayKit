@@ -7,5 +7,5 @@
 
 ---
 
-This is a short-term visualization project of tracheal path planning, which may develop into an image-guided surgery toolkit for respiratory department in the future. 
+This is a short-term visualization project of bronchoscope path planning, which may develop into an image-guided surgery toolkit for respiratory department in the future. 
 
